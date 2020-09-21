@@ -1,0 +1,85 @@
+@import "reset";
+@import "mixin";
+
+//değişkenler
+
+
+.container {
+    width: (400px + 50px);
+    background-color: white;
+    @include border-radius(3px);
+    padding: 30px;
+    margin-bottom: 30px;
+
+    .login-header {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .login-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        & input {
+            height: 50px;
+            padding: 0 20px;
+            border: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+    }
+
+    .login-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .login-footer a {
+            color: rgb(155, 154, 154);
+            transition: 300ms all;
+            //& : üst class'ın yerine geçiyor
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+
+}
+
+
+.egim{
+    //hover özelliğinde üstüne gelince yumuşak geçiş
+    transition: 300ms all;
+}
+
+
+
+
+
+.login-footer a:first-child {
+    background-color: royalblue;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    border-radius: 3px;
+    @extend .egim;
+
+}
+
+.login-footer a:first-child:hover {
+    background-color: black;
+}
+
+.signup a {
+    display: block;
+    color: white;
+    @extend .egim;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
