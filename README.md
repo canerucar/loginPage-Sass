@@ -1,8 +1,7 @@
 # Login Page Sass
 
 #### A simple login page developed with sass
-
-#### How to install
+#### How to install
 
 <code> Download the project to your local </code> <br>
 <code> Open with code editor or IDE </code> <br>
